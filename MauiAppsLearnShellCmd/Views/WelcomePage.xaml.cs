@@ -28,7 +28,7 @@ namespace Views
 
         private void OnSimplePageClicked(object sender, EventArgs e)
         {
-                        // נווט לדף פשוט מאפיין בקוד אחורי
+            // נווט לדף פשוט מאפיין בקוד אחורי
             Shell.Current.GoToAsync("SimplePage");
         }
 
