@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net10.0-android</TargetFrameworks>
@@ -15,6 +15,8 @@
 		<OutputType>Exe</OutputType>
 		<RootNamespace>MVVMBBasic</RootNamespace>
 		<UseMaui>true</UseMaui>
+		<MauiVersion>10.0.0</MauiVersion>
+
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -74,10 +76,16 @@
 	  <Compile Update="Views\CalcAge.xaml.cs">
 	    <DependentUpon>CalcAge.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\TempCalc.xaml.cs">
+	    <DependentUpon>TempCalc.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\CalculatorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TempCalc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

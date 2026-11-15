@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+﻿
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+
 
 namespace ViewModels;
 
@@ -72,7 +74,7 @@ public abstract class BaseViewModel : INotifyPropertyChanged
         {
             return await Shell.Current.DisplayAlertAsync(title, message, accept, cancel);
         }
-        if (Application.Current?.Windows.Count > 0 && Application.Current.Windows[0].Page != null)
+        else if (Application.Current?.Windows.Count > 0 && Application.Current.Windows[0].Page != null)
         {
             return await Application.Current.Windows[0].Page!.DisplayAlertAsync(title, message, accept, cancel);
         }

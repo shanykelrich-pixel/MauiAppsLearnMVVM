@@ -5,16 +5,16 @@ using System.Text;
 namespace ViewModels
 
 {
-    public class SimpleViewModel:BaseViewModel
+    public class SimpleViewModel : BaseViewModel
     {
         // מאפיין לדוגמה שתרצה להציג ב-XAML
-        public string MyCustomProperty { get; set; } = "שלום מהקוד מאחור!";
+       
 
         public SimpleViewModel()
         {
             Title = "דף פשוט";
         }
-    }
+    
         //// מאפיין לדוגמה שתרצה להציג ב-XAML
    private string _myCustomProperty = "שלום מהקוד מאחור!";
 
@@ -32,3 +32,6 @@ namespace ViewModels
             }
         }
     }
+}
+
+
