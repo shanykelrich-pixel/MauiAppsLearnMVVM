@@ -1,4 +1,5 @@
-﻿namespace MVVMBBasic
+﻿
+namespace MVVMBBasic
 {
     public partial class AppShell : Shell
     {
