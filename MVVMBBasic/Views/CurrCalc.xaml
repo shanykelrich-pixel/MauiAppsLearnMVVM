@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMBBasic.Views.CurrCalc"
+             Title="CurrCalc">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label Text="הכנס סכום"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Text="{Binding Amount}"
+            Placeholder="הכנס סכום"
+            Keyboard="Numeric" />
+        
+
+        <Picker             Title="בחר מטבע להמיר"
+            ItemsSource="{Binding Currencies}"
+            SelectedItem="{Binding SelectedCurrency}" />
+        <Picker
+            Title="בחר מטבע יעד"
+            ItemsSource="{Binding Currencies}"
+            SelectedItem="{Binding SelectedCurrency2}" />
+        <Button 
+            Title="חשב"
+            Command="{Binding ConvertCurrencyCommand}" />
+        <Button
+             Text="חזרה לדף הראשי"
+             Command="{Binding BackCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>

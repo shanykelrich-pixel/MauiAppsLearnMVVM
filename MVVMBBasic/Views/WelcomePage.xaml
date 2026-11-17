@@ -8,7 +8,17 @@
              Title="{Binding Title}"
              Shell.FlyoutBehavior="Disabled">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Gray200">#C8C8C8</Color>
+            <Color x:Key="Gray900">#212121</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="Gray950">#141414</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <Grid Padding="20">
+
         <Border StrokeShape="RoundRectangle 12"
                 StrokeThickness="1"
                 Stroke="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}"
@@ -38,7 +48,12 @@
                         Command="{Binding NavigateToSecondCalculatorCommand}"
                         WidthRequest="200"/>
 
+                <Button Text="מחשבון טמפרטורה"
+                        Command="{Binding NavigateToTempCalcCommand}"
+                        WidthRequest="200"/>
+
             </VerticalStackLayout>
         </Border>
     </Grid>
+
 </ContentPage>

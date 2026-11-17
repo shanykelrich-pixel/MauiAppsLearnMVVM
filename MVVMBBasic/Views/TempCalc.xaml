@@ -11,5 +11,17 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Entry Text="{Binding Temperature}"
+                Placeholder="הכנס טמפרטורה"
+                Keyboard="Numeric" />
+        <Button Text="חשב טמפרטורה"
+                Command="{Binding CalculateTemperatureCommand}" />
+        <Label Text="{Binding Result}"
+                FontSize="20"
+                HorizontalOptions="Center" />
+        <Button
+          Text="חזרה לדף הראשי"
+          Command="{Binding BackCommand}" />
+        
     </VerticalStackLayout>
 </ContentPage>

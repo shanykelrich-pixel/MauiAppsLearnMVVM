@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace ViewModels;
 
@@ -11,8 +12,16 @@ public abstract class BaseViewModel : INotifyPropertyChanged
 {
     private bool _isLoading;
     private string _title = string.Empty;
-
+    public ICommand BackCommand { get; }
+    public BaseViewModel()
+    {
+        BackCommand = new Command(async () =>
+        {
+            await Shell.Current.GoToAsync("//WelcomePage");
+        });
+    }
     public event PropertyChangedEventHandler? PropertyChanged;
+    
 
     /// <summary>
     /// האם מתבצעת פעולת טעינה ברקע (עבור מחוון טעינה ActivityIndicator)

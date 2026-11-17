@@ -7,14 +7,13 @@
     FlyoutBehavior="Flyout"
     Title="MVVMBBasic">
 
-    <!-- דף פתיחה -->
     <ShellContent
         Title="Welcome"
         Route="WelcomePage"
         ContentTemplate="{DataTemplate views:WelcomePage}" />
 
-    <!-- תפריט מחשבונים -->
-    <FlyoutItem Title="מחשבונים">
+    <FlyoutItem Title="מחשבונים"
+                Route="Calculators">
 
         <ShellContent
             Title="מחשבון מתמטי"
@@ -25,6 +24,11 @@
             Title="מחשבון גיל"
             Route="SecondCalculatorPage"
             ContentTemplate="{DataTemplate views:CalcAgePage}" />
+
+        <ShellContent
+            Title="מחשבון טמפרטורה"
+            Route="TempCalcPage"
+            ContentTemplate="{DataTemplate views:TempCalc}" />
 
     </FlyoutItem>
 

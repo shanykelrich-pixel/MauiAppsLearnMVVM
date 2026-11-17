@@ -23,7 +23,6 @@ namespace ViewModels
                 }
             }
         }
-
         public string Number2
         {
             get => _number2;
@@ -36,6 +35,8 @@ namespace ViewModels
                 }
             }
         }
+
+
 
         public string Result
         {

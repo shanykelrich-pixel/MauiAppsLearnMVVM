@@ -8,6 +8,7 @@ namespace ViewModels
     {
         public ICommand NavigateToCalculatorCommand { get; }
         public ICommand NavigateToSecondCalculatorCommand { get; }
+        public ICommand NavigateToTempCalcCommand { get; }
 
         public WelcomeViewModel()
         {
@@ -21,6 +22,10 @@ namespace ViewModels
             NavigateToSecondCalculatorCommand = new Command(async () =>
             {
                 await Shell.Current.GoToAsync("//SecondCalculatorPage");
+            });
+            NavigateToTempCalcCommand = new Command(async () =>
+            {
+                await Shell.Current.GoToAsync("//Calculators/TempCalcPage");
             });
         }
     }

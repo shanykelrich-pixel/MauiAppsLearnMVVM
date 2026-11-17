@@ -25,6 +25,9 @@
         <Label Text="{Binding Result}" 
                FontSize="20" 
                HorizontalOptions="Center" />
+        <Button
+              Text="חזרה לדף הראשי"
+             Command="{Binding BackCommand}" />
 
     </VerticalStackLayout>
 </ContentPage>
