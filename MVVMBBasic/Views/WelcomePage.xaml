@@ -51,6 +51,10 @@
                 <Button Text="מחשבון טמפרטורה"
                         Command="{Binding NavigateToTempCalcCommand}"
                         WidthRequest="200"/>
+                
+                <Button Text="מחשבון מטבעות"
+                        Command="{Binding NavigateToCurrencyCalcCommand}"
+                        WidthRequest="200"/>
 
             </VerticalStackLayout>
         </Border>

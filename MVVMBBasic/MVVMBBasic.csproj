@@ -76,8 +76,11 @@
 	  <Compile Update="Views\CalcAge.xaml.cs">
 	    <DependentUpon>CalcAge.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\TempCalc.xaml.cs">
-	    <DependentUpon>TempCalc.xaml</DependentUpon>
+	  <Compile Update="Views\CurrCalcPage.xaml.cs">
+	    <DependentUpon>CurrCalcPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\TempCalcPage.xaml.cs">
+	    <DependentUpon>TempCalcPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -85,13 +88,13 @@
 	  <MauiXaml Update="Views\CalculatorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\CurrCalc.xaml">
+	  <MauiXaml Update="Views\CurrCalcPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CurrencyCalc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TempCalc.xaml">
+	  <MauiXaml Update="Views\TempCalcPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

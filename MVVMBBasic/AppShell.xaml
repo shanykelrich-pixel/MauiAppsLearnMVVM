@@ -27,8 +27,13 @@
 
         <ShellContent
             Title="מחשבון טמפרטורה"
-            Route="TempCalcPage"
-            ContentTemplate="{DataTemplate views:TempCalc}" />
+            Route="TempCalc"
+            ContentTemplate="{DataTemplate views:TempCalcPage}" />
+
+        <ShellContent
+           Title="מחשבון מטבעות"
+           Route="CurrCalc"
+           ContentTemplate="{DataTemplate views:CurrCalcPage}" />
 
     </FlyoutItem>
 

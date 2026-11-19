@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using Xamarin.Google.Crypto.Tink.Signature;
 
 namespace ViewModels
 {
@@ -13,7 +12,7 @@ namespace ViewModels
 
         private string _fromCurrency = "ILS";
         private string _toCurrency = "USD";
-        public List<string> Currencis { get; set; } = new List<string> { "ILS", "USD", "EUR", "GBP" };
+        public List<string> Currencies { get; set; } = new List<string> { "ILS", "USD", "EUR", "GBP" };
         private Dictionary<string, double> exchangeRates = new Dictionary<string, double>
         {
             { "ILS", 1.0 },
@@ -90,10 +89,7 @@ namespace ViewModels
             }
         }
         public event PropertyChangingEventHandler? PropertyChanging;
-        protected void OnPropertyChanging([CallerMemberName] string? propertyName = null)
-        {
-            PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
-        }
+        
 
 
 

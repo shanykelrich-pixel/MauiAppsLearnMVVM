@@ -2,17 +2,17 @@ using ViewModels;
 
 namespace Views;
 
-public partial class TempCalc : ContentPage
+public partial class TempCalcPage : ContentPage
 {
     
 
-        public TempCalc() : this(new TempCalcViewModel())
+        public TempCalcPage() : this(new TempCalcViewModel())
     {
     }
     
 
     // קבלת ה-ViewModel ישירות דרך Dependency Injection וחיבור ה-Binding Context
-    public TempCalc(TempCalcViewModel viewModel)
+    public TempCalcPage(TempCalcViewModel viewModel)
     {
         InitializeComponent();
        
