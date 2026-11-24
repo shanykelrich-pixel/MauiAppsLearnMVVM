@@ -55,6 +55,9 @@
                 <Button Text="מחשבון מטבעות"
                         Command="{Binding NavigateToCurrencyCalcCommand}"
                         WidthRequest="200"/>
+                <Button Text="ניהול משימות"
+                        Command="{Binding NavigateToTaskCommand}"
+                        WidthRequest="200"/>
 
             </VerticalStackLayout>
         </Border>

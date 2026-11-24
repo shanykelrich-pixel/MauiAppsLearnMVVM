@@ -34,6 +34,10 @@
            Title="מחשבון מטבעות"
            Route="CurrCalc"
            ContentTemplate="{DataTemplate views:CurrCalcPage}" />
+        <ShellContent 
+            Title="ניהול משימות"
+            Route="TaskPage"
+            ContentTemplate="{DataTemplate views:TaskPage}" />
 
     </FlyoutItem>
 

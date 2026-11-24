@@ -94,6 +94,9 @@
 	  <MauiXaml Update="Views\CurrencyCalc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TaskPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TempCalcPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

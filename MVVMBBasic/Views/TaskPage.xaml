@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ViewModels"
+    x:Class="Views.TaskPage"
+    x:DataType="vm:TaskItemViewModel"
+    Title="Tasks">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- כותרת -->
+        <Label
+            Text="Tasks Manager"
+            FontSize="28"
+            HorizontalOptions="Center"
+            FontAttributes="Bold" />
+
+        <!-- התחלת משימה -->
+        <Button
+            Text="Start Task"
+            Command="{Binding StartTaskCommand}" />
+
+        <!-- מספר משימות שהסתיימו -->
+        <Label
+            Text="{Binding CompletedTasksCount, StringFormat='Completed Tasks: {0}'}"
+            FontSize="18"
+            HorizontalOptions="Center" />
+
+        <!-- ניקוי משימות -->
+        <Button
+            Text="Clear All"
+            Command="{Binding ClearAllCommand}" />
+
+        <!-- רשימת המשימות -->
+        <CollectionView ItemsSource="{Binding Tasks}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="vm:TaskItemViewModel">
+
+                    <Frame
+                        Padding="10"
+                        Margin="5"
+                        BorderColor="Gray">
+
+                        <VerticalStackLayout Spacing="10">
+
+                            <Label
+                                Text="{Binding TaskId, StringFormat='Task #{0}'}"
+                                FontAttributes="Bold"
+                                FontSize="18" />
+
+                            <ProgressBar
+                                Progress="{Binding Progress}" />
+
+                            <Label
+                                Text="{Binding StatusText}"
+                                HorizontalOptions="Center" />
+
+                            <Button
+                                Text="Cancel"
+                                Command="{Binding CancelCommand}"
+                                IsEnabled="{Binding IsCancelEnabled}" />
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <!-- חזרה לדף הבית -->
+        <Button
+            Text="Back Home"
+            Command="{Binding GoHomeCommand}" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
